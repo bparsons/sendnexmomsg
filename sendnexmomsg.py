@@ -41,10 +41,7 @@ if type(restofline) in [list, tuple, set]:
 
 message = message.strip()
 
-print "Sending \'%s\' to %s..." % (message, sendto)
-
 nexmomsg = {'reqtype': nexmoreqtype, 'password': nexmopass, 'from': nexmosendnumber, 'to': sendto, 'username': nexmouser, 'text': message }
 sms1 = NexmoMessage(nexmomsg)
 sms1.set_text_info(message)
-print sms1.send_request()
 
